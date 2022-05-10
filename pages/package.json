@@ -24,7 +24,7 @@
     "css-loader": "^6.5.1",
     "esbuild-loader": "^2.18.0",
     "fork-ts-checker-notifier-webpack-plugin": "^5.0.0",
-    "fork-ts-checker-webpack-plugin": "^6.5.0",
+    "fork-ts-checker-webpack-plugin": "^7.2.11",
     "html-webpack-plugin": "^5.5.0",
     "jsdom": "^19.0.0",
     "jsdom-global": "^3.0.2",

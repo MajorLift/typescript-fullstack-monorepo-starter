@@ -1,0 +1,50 @@
+{
+  "name": "@mono/pages",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "main": "./build/bundle.js",
+  "types": "./dist/src/index.d.ts",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --config ./webpack.production.js",
+    "dev": "NODE_ENV=development webpack-dev-server --config ./webpack.development.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.0",
+    "@types/jsdom": "^16.2.14",
+    "@types/node": "^17.0.10",
+    "@types/react": "^18.0.5",
+    "@types/react-dom": "^18.0.0",
+    "@types/react-router": "^5.1.17",
+    "@types/react-router-dom": "^5.3.2",
+    "@types/tailwindcss": "^3.0.3",
+    "@types/webpack": "^5.28.0",
+    "autoprefixer": "^10.4.7",
+    "csp-html-webpack-plugin": "^5.1.0",
+    "css-loader": "^6.5.1",
+    "esbuild-loader": "^2.18.0",
+    "fork-ts-checker-notifier-webpack-plugin": "^5.0.0",
+    "fork-ts-checker-webpack-plugin": "^6.5.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jsdom": "^19.0.0",
+    "jsdom-global": "^3.0.2",
+    "mini-css-extract-plugin": "^2.5.2",
+    "postcss": "^8.4.5",
+    "postcss-loader": "^6.2.1",
+    "sass": "^1.45.2",
+    "sass-loader": "^12.4.0",
+    "tailwindcss": "^3.0.16",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.7.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
+    "redux": "^4.1.2"
+  }
+}

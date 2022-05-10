@@ -1,0 +1,25 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "composite": false,
+        "rootDir": ".",
+        "outDir": "dist",
+        "baseUrl": ".",
+        "types": [],
+        "typeRoots": [
+            "../node_modules/@types"
+        ],
+        "paths": {},
+    },
+    "references": [],
+    "exclude": [
+        "build",
+        "static",
+        "src/assets",
+        "node_modules"
+    ],
+    "include": [
+        "src",
+        "tests"
+    ]
+}

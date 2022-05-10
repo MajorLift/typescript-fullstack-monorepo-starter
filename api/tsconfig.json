@@ -1,0 +1,25 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "composite": true,
+        "module": "CommonJS",
+        "rootDir": ".",
+        "outDir": "dist",
+        "baseUrl": ".",
+        "types": [],
+        "typeRoots": [
+            "../common/@types",
+            "../node_modules/@types"
+        ],
+        "paths": {},
+    },
+    "references": [],
+    "exclude": [
+        "dist",
+        "node_modules"
+    ],
+    "include": [
+        "src",
+        "tests"
+    ]
+}

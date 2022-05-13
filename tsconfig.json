@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    /* Paths */
+    "outDir": "dist",
+    "typeRoots": [
+      "node_modules/@types",
+      "common/@types"
+    ],
+    /* Project */
+    "target": "ESNext", // specify ECMAScript target version
+    "module": "ESNext", // specify module code generation
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    /* Build */
+    "noEmit": true,
+    "sourceMap": true, // allow sourcemap support
+    "jsx": "react", // use typescript to transpile jsx to js
+    "declaration": true,
+    "declarationMap": false,
+    "preserveSymlinks": true,
+    /* Module Resolution Options */
+    "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */,
+    "isolatedModules": true /* Transpile each file as a separate module */,
+    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
+    "forceConsistentCasingInFileNames": true /* Error out if import and file system have a casing mismatch. Recommended by TS. */,
+    "skipLibCheck": true /* Significant perf increase by skipping checking .d.ts files, particularly those in node_modules. Recommended by TS. */,
+    "resolveJsonModule": true, // Allow importing .json files
+    /* Type-Checking Options */
+    "strict": true /* enable all strict type-checking options. Implies noImplicitAny, strictNullChecks. */,
+    "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */,
+    "noImplicitOverride": true /* Ensure overriding members in derived classes are marked with an override modifier. */,
+    "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
+    "experimentalDecorators": true,
+  },
+  "paths": [
+    {
+      "@/api": [
+        "api/src"
+      ],
+      "@/pages": [
+        "pages/src"
+      ]
+    }
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}

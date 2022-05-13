@@ -1,0 +1,55 @@
+{
+    "name": "mono",
+    "description": "",
+    "license": "MIT",
+    "workspaces": {
+        "packages": [
+            "api",
+            "pages"
+        ],
+        "nohoist": []
+    },
+    "scripts": {
+        "dev": "concurrently \"yarn workspace @mono/api start\" \"yarn workspace @mono/pages dev\" ",
+        "build": "yarn workspace @mono/pages build && yarn workspace @mono/api tsc",
+        "start": "yarn build && yarn workspace @mono/api start",
+        "clean": "yarn workspaces foreach -v exec rm -rf dist",
+        "tsc": "yarn workpaces foreach -vt run tsc",
+        "tsc-test": "yarn tsc && yarn test",
+        "lint": "yarn prettier-fix && yarn remove-unused-imports",
+        "eslint-check": "yarn eslint --ext .js,.jsx,.ts,.tsx **/src",
+        "remove-unused-imports": "yarn eslint --fix --ext .js,.jsx,.ts,.tsx --no-eslintrc --config ./.eslintrc-remove-imports **/src",
+        "prettier-check": "npx prettier --check .",
+        "prettier-fix": "npx prettier --write .",
+        "test": "jest",
+        "test-update": "jest --updateSnapshot",
+        "test-all": "yarn workspaces foreach run test"
+    },
+    "private": true,
+    "dependencies": {},
+    "devDependencies": {
+        "@types/jest": "27.5.0",
+        "@types/react": "^18.0.9",
+        "@types/react-dom": "^18.0.3",
+        "@typescript-eslint/eslint-plugin": "^5.23.0",
+        "@typescript-eslint/parser": "^5.23.0",
+        "concurrently": "^7.1.0",
+        "eslint": "^8.15.0",
+        "eslint-config-airbnb-typescript": "^17.0.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-formatter-pretty": "^4.1.0",
+        "eslint-plugin-eslint-comments": "^3.2.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jest": "^26.1.5",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-promise": "^6.0.0",
+        "eslint-plugin-react": "^7.29.4",
+        "eslint-plugin-react-hooks": "^4.5.0",
+        "eslint-plugin-unused-imports": "^2.0.0",
+        "jest": "^28.1.0",
+        "prettier": "2.6.2",
+        "ts-jest": "^28.0.2",
+        "typescript": "^4.6.4"
+    }
+}

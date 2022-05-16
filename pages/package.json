@@ -22,7 +22,7 @@
     "autoprefixer": "^10.4.7",
     "csp-html-webpack-plugin": "^5.1.0",
     "css-loader": "^6.7.1",
-    "esbuild-loader": "^2.18.0",
+    "esbuild-loader": "^2.19.0",
     "fork-ts-checker-notifier-webpack-plugin": "^6.0.0",
     "fork-ts-checker-webpack-plugin": "^7.2.11",
     "html-webpack-plugin": "^5.5.0",

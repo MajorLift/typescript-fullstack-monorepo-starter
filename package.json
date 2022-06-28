@@ -1,0 +1,57 @@
+{
+  "name": "mono",
+  "description": "",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "app",
+      "api",
+      "common/core",
+      "common/feature"
+    ]
+  },
+  "scripts": {
+    "start": "docker-compose up -d && yarn build && yarn workspace @mono/api start",
+    "dev": "docker-compose up -d && yarn build:common && concurrently \"yarn workspace @mono/api start\" \"yarn workspace @mono/app dev\"",
+    "build": "yarn build:common && yarn build:app",
+    "build:app": "yarn workspace @mono/app build",
+    "build:common": "npx tsc --build common/*",
+    "lint": "yarn prettier-fix && yarn remove-unused-imports",
+    "eslint-check": "yarn eslint --ext .js,.jsx,.ts,.tsx **/src",
+    "remove-unused-imports": "yarn eslint --fix --ext .js,.jsx,.ts,.tsx --no-eslintrc --config ./.eslintrc-remove-imports **/src",
+    "prettier-check": "npx prettier --check .",
+    "prettier-fix": "npx prettier --write .",
+    "test": "jest",
+    "test-update": "jest --updateSnapshot"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.1",
+    "@types/redux": "^3.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "concurrently": "^7.2.1",
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-formatter-pretty": "^4.1.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "jest": "^28.1.0",
+    "prettier": "2.6.2",
+    "ts-jest": "^28.0.4",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
+    "redux": "^4.2.0"
+  }
+}

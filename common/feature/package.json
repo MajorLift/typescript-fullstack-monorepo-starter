@@ -1,0 +1,12 @@
+{
+  "name": "@mono/feature",
+  "version": "1.0.0",
+  "description": "feature: feature",
+  "license": "UNLICENSED",
+  "main": "src/index.ts",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "tsc": "node ../../node_modules/.bin/tsc",
+    "test": "jest"
+  }
+}

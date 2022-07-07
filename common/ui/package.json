@@ -1,0 +1,16 @@
+{
+  "name": "@mono/ui",
+  "version": "1.0.0",
+  "description": "UI State",
+  "license": "UNLICENSED",
+  "main": "src/index.ts",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "tsc": "node ../../node_modules/.bin/tsc",
+    "test": "jest",
+    "npm-update": "npx -y npm-check-updates -u"
+  },
+  "dependencies": {
+    "@mono/feature": "1.0.0"
+  }
+}

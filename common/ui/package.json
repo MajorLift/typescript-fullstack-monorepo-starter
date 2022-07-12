@@ -1,0 +1,17 @@
+{
+  "name": "@mono/ui",
+  "version": "1.0.0",
+  "description": "UI State",
+  "license": "UNLICENSED",
+  "main": "src/index.ts",
+  "scripts": {
+    "tsc": "node ../../node_modules/.bin/tsc",
+    "swc": "node ../../node_modules/.bin/swc ./src/* --out-dir ./dist --filename ../../.swcrc",
+    "swc-watch": "node ../../node_modules/.bin/swc ./src/* -w --out-dir ./dist --filename ../../.swcrc",
+    "test": "jest",
+    "npm-update": "npx -y npm-check-updates -u"
+  },
+  "dependencies": {
+    "@mono/feature": "1.0.0"
+  }
+}

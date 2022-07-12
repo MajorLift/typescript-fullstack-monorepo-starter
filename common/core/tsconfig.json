@@ -1,0 +1,41 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "types": [
+      "node",
+      "jest",
+      "redux"
+    ],
+  },
+  "paths": {
+    "@mono/feature": [
+      "../feature/src"
+    ],
+    "@mono/ui": [
+      "../ui/src"
+    ],
+    "@mono/api": [
+      "../api/src"
+    ]
+  },
+  "references": [
+    {
+      "path": "../feature/tsconfig.json",
+    },
+    {
+      "path": "../ui/tsconfig.json",
+    },
+    {
+      "path": "../api/tsconfig.json",
+    },
+  ],
+  "include": [
+    "src",
+    "test"
+  ]
+}

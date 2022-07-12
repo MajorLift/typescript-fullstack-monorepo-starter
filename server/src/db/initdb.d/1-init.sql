@@ -1,0 +1,34 @@
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET xmloption = content;
+SET client_min_messages = warning;
+
+DROP TABLE IF EXISTS items;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS sessions;
+
+CREATE TABLE users (
+    _id VARCHAR(255) NOT NULL UNIQUE PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),
+    name VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modified_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE items (
+    _id VARCHAR(255) NOT NULL UNIQUE PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),
+    title VARCHAR(255) NOT NULL DEFAULT 'Untitled',
+    created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modified_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    content TEXT
+);
+
+CREATE TABLE sessions (
+    _id VARCHAR(255) NOT NULL UNIQUE PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),
+    user_id VARCHAR(255) NOT NULL,
+    token VARCHAR(255) NOT NULL,
+    CONSTRAINT fk_user
+        FOREIGN KEY (user_id)
+        REFERENCES users(_id)
+        ON DELETE CASCADE
+);

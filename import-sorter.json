@@ -1,0 +1,58 @@
+{
+  "generalConfiguration": {
+    "sortOnBeforeSave": true,
+    "exclude": [
+      "types"
+    ]
+  },
+  "importStringConfiguration": {
+    "hasSemicolon": false,
+    "maximumNumberOfImportExpressionsPerLine": {
+      "count": 100,
+      "type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne"
+    },
+    "tabSize": 2,
+    "trailingComma": "multiLine"
+  },
+  "sortConfiguration": {
+    "customOrderingRules": {
+      "defaultOrderLevel": 10,
+      "rules": [
+        {
+          "regex": "react|react-native",
+          "orderLevel": 10
+        },
+        {
+          "regex": "^(react|react-native)$",
+          "orderLevel": 10
+        },
+        {
+          "type": "importMember",
+          "regex": "^$",
+          "orderLevel": 20,
+          "disableSort": true
+        },
+        {
+          "regex": "@/.*",
+          "orderLevel": 25
+        },
+        {
+          "regex": "[a-z].*\/.*",
+          "orderLevel": 30
+        },
+        {
+          "regex": "styles",
+          "orderLevel": 35
+        },
+        {
+          "regex": "(components)",
+          "orderLevel": 40
+        },
+        {
+          "regex": "^[.]",
+          "orderLevel": 50
+        }
+      ]
+    }
+  }
+}

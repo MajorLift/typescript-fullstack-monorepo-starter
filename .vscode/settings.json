@@ -1,0 +1,15 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript][typescriptreact][javascript]": {
+    "editor.tabSize": 2,
+  },
+  "[json][jsonc]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+  },
+  "eslint.workingDirectories": [],
+}

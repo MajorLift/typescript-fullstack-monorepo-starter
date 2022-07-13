@@ -1,0 +1,204 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": [
+      "./tsconfig.json",
+      "./server/tsconfig.json",
+      "./app/tsconfig.json",
+      "./common/*/tsconfig.json"
+    ]
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-comments",
+    "jest",
+    "promise",
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:jest/recommended",
+    "plugin:promise/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "strict": "error",
+    "prettier/prettier": "warn",
+    "semi": "off",
+    "@typescript-eslint/semi": "off",
+    "no-unexpected-multiline": "error", // required for no semicolons styling	
+    /* @typescript-eslint linter rules */
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          // "": {	
+          //   "message": "",	
+          //   "fixWith": ""	
+          // },
+        }
+      }
+    ], // by default, bans upper-case primitives, Function, Object, {}. Suggests Record<string, unknown>, unknown.	
+    "@typescript-eslint/explicit-function-return-type": "off", // Allow most functions to rely on type inference. If the function is exported, then `@typescript-eslint/explicit-module-boundary-types` will ensure it's typed.	
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/naming-convention": "warn",
+    "@typescript-eslint/no-explicit-any": "off", // forbids "any" usage entirely.	
+    // "@typescript-eslint/no-floating/promises": "warn",	
+    // "@typescript-eslint/no-inferrable-types": "warn", // prevents explicit declaration of simple, inferrable types	
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    // "@typescript-eslint/no-unnecessary-condition": "warn", // shouldn"t be enabled if "any" is used in codebase	
+    // "@typescript-eslint/no-unnecessary-type-assertion": "warn",	
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": true,
+        "variables": true,
+        "typedefs": true
+      }
+    ], // Use function hoisting to improve code readability	
+    // "@typescript-eslint/promise-function-async": "warn",	
+    // "@typescript-eslint/require-await": "warn",	
+    /* Uncomment to globally disable individual linter rules */
+    "arrow-body-style": "off", // conflicts with prettier	
+    "class-methods-use-this": "warn",
+    "consistent-return": "warn",
+    "curly": "off",
+    // "comma-dangle": "off",	
+    "default-case": "off",
+    // "dot-notation": "off",	
+    "eqeqeq": "warn",
+    // "func-names": "off",	
+    // "guard-for-in": "off",	
+    // "import/extensions": "off",	
+    "import/no-default-export": "off",
+    "import/no-extraneous-dependencies": "off", // It's not accurate in the monorepo style	
+    // "import/no-unresolved": "off",	
+    "import/prefer-default-export": "off", // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html	
+    // "max-len": "off",	
+    // "no-alert": "off",	
+    "no-console": "off",
+    // "no-confusing-arrow": "off",	
+    "no-nested-ternary": "off",
+    "no-param-reassign": "error", // enforces pure function signature	
+    "no-plusplus": "off",
+    "no-prototype-builtins": "off", // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins	
+    // "no-restricted-globals": "off",	
+    // "no-restricted-syntax": "off",	
+    // "no-shadow": "off",	
+    // "no-unexpected-multiline": "off",	
+    // "no-unused-vars": "off",	
+    // "no-useless-constructor": "off",	
+    "no-underscore-dangle": "off",
+    // "no-unused-expressions": "off",	
+    "no-return-assign": "off",
+    "no-throw-literal": "warn",
+    "prefer-arrow-callback": "off", // conflicts with prettier	
+    // "prefer-destructuring": "off",	
+    "prefer-template": "off",
+    // "spaced-comment": "off"	
+    /* react, react-hooks linter rules */
+    // "react/boolean-prop-naming": "off",	
+    // "react/button-has-type": "off",	
+    "react/destructuring-assignment": "off", // Too restrictive: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md	
+    // "react/display-name": ["off"],	
+    "react/function-component-definition": "off",
+    // "react/forbid-prop-types": "off",	
+    "react/jsx-boolean-value": "off",
+    "react/jsx-filename-extension": "off", // No jsx extension: https://github.com/facebook/create-react-app/issues/87#issuecomment-234627904	
+    // "react/jsx-no-duplicate-props": "off",	
+    // "react/no-access-state-in-setstate": "off",	
+    // "react/no-array-index-key": "off",	
+    // "react/no-did-update-set-state": "off",	
+    "react/no-unused-prop-types": "warn",
+    // "react/no-unused-state": "off",	
+    // "react/prefer-stateless-function": "off",	
+    "react/prop-types": "off",
+    // "react/react-in-jsx-scope": "off"	
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    /**	
+       * This is a compatibility ruleset that:	
+       * - disables rules from eslint:recommended which are already handled by TypeScript.	
+       * - enables rules that make sense due to TS"s typechecking / transpilation.	
+       * See: https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts	
+       */
+    "constructor-super": "off", // ts(2335) & ts(2377)	
+    "getter-return": "off", // ts(2378)	
+    "no-const-assign": "off", // ts(2588)	
+    "no-dupe-args": "off", // ts(2300)	
+    "no-dupe-class-members": "off", // ts(2393) & ts(2300)	
+    "no-dupe-keys": "off", // ts(1117)	
+    "no-func-assign": "off", // ts(2539)	
+    "no-import-assign": "off", // ts(2539) & ts(2540)	
+    "no-new-symbol": "off", // ts(2588)	
+    "no-obj-calls": "off", // ts(2349)	
+    "no-redeclare": "off", // ts(2451)	
+    "no-setter-return": "off", // ts(2408)	
+    "no-this-before-super": "off", // ts(2376)	
+    "no-undef": "off", // ts(2304)	
+    "no-unreachable": "off", // ts(7027)	
+    "no-unsafe-negation": "off", // ts(2365) & ts(2360) & ts(2358)	
+    "no-use-before-define": "off",
+    "no-var": "error", // ts transpiles let/const to var, so no need for vars any more	
+    "prefer-const": "error", // ts provides better types with const	
+    "prefer-rest-params": "error", // ts provides better types with rest args over arguments	
+    "prefer-spread": "error", // ts transpiles spread to apply, so no need for manual apply	
+    "valid-typeof": "off" // ts(2367)	
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.js"
+      ],
+      "rules": {
+        "@typescript-eslint/no-unsafe-call": "warn",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-var-requires": "off" // Allow `require()`	
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+        // Choose from one of the "project" configs below or omit to use <root>/tsconfig.json by default
+        // use an array of glob patterns
+        "project": [
+          "./tsconfig.json",
+          "./*/tsconfig.json",
+          "./common/*/tsconfig.json"
+        ]
+      }
+    }
+  }
+}

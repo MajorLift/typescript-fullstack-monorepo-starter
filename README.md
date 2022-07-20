@@ -1,4 +1,4 @@
-# ts-fullstack-monorepo-starter
+# typescript-fullstack-monorepo-starter
 
 ## Stack 
 - **Frontend**: React, Redux Toolkit, Tailwind CSS

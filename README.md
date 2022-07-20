@@ -1,4 +1,4 @@
-# ts-react-redux-express-monorepo-template
+# ts-fullstack-monorepo-starter
 
 ## Monorepo
 - React SPA, Express server, Redux and RTK Query store slices are all organized into indepenent modules. 

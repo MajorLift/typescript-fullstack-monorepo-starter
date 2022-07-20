@@ -89,6 +89,7 @@ export class App {
     this.app.use('/api', api)
     const v1 = Router()
     api.use('/v1', v1)
+    v1.use('/', itemsRouter)
   }
 
   private globalRoute() {

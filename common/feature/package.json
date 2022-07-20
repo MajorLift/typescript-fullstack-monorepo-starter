@@ -1,7 +1,7 @@
 {
-  "name": "@mono/core",
+  "name": "@mono/feature",
   "version": "1.0.0",
-  "description": "",
+  "description": "feature",
   "license": "UNLICENSED",
   "main": "src/index.ts",
   "scripts": {
@@ -10,8 +10,5 @@
     "swc-watch": "node ../../node_modules/.bin/swc ./src/* -w --out-dir ./dist --filename ../../.swcrc",
     "test": "jest",
     "npm-update": "npx -y npm-check-updates -u"
-  },
-  "dependencies": {
-    "@mono/feature": "1.0.0",
   }
 }

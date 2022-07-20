@@ -1,3 +1,4 @@
+import type { UUID } from '@mono/feature'
 import type { NextFunction, Request, Response } from 'express'
 
 export const isDev = process.env.NODE_ENV === 'development'

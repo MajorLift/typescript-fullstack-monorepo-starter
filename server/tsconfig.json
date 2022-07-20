@@ -21,11 +21,17 @@
       "@mono/core": [
         "../common/core/src",
       ],
+      "@mono/feature": [
+        "../common/feature/src",
+      ],
     },
   },
   "references": [
     {
       "path": "../common/core/tsconfig.json"
+    },
+    {
+      "path": "../common/feature/tsconfig.json"
     },
   ],
   "exclude": [

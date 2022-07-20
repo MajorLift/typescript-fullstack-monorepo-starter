@@ -21,6 +21,9 @@
       "@mono/feature": [
         "../common/feature/src"
       ],
+      "@mono/ui": [
+        "../common/ui/src"
+      ],
       "@mono/api": [
         "../common/api/src"
       ],
@@ -42,11 +45,19 @@
     {
       "path": "../common/core/tsconfig.json"
     },
+    {
+      "path": "../common/feature/tsconfig.json"
+    },
+    {
+      "path": "../common/ui/tsconfig.json"
+    },
+    {
+      "path": "../common/api/tsconfig.json"
+    },
   ],
   "exclude": [
     "build",
     "static",
-    "node_modules"
   ],
   "include": [
     "src",

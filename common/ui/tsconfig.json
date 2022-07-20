@@ -11,31 +11,19 @@
       "jest",
       "redux"
     ],
-  },
-  "paths": {
-    "@mono/feature": [
-      "../feature/src"
-    ],
-    "@mono/ui": [
-      "../ui/src"
-    ],
-    "@mono/api": [
-      "../api/src"
-    ],
+    "paths": {
+      "@mono/feature": [
+        "../feature/src"
+      ]
+    },
   },
   "references": [
     {
       "path": "../feature/tsconfig.json",
-    },
-    {
-      "path": "../ui/tsconfig.json",
-    },
-    {
-      "path": "../api/tsconfig.json",
-    },
+    }
   ],
   "include": [
     "src",
-    "test"
+    "tests"
   ]
 }

@@ -54,6 +54,7 @@
     "@mono/api": "1.0.0",
     "@mono/core": "1.0.0",
     "@mono/feature": "1.0.0",
+    "@mono/ui": "1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",

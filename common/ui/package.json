@@ -1,7 +1,7 @@
 {
-  "name": "@mono/core",
+  "name": "@mono/ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "UI State",
   "license": "UNLICENSED",
   "main": "src/index.ts",
   "scripts": {
@@ -12,8 +12,6 @@
     "npm-update": "npx -y npm-check-updates -u"
   },
   "dependencies": {
-    "@mono/api": "1.0.0",
-    "@mono/feature": "1.0.0",
-    "@mono/ui": "1.0.0"
+    "@mono/feature": "1.0.0"
   }
 }

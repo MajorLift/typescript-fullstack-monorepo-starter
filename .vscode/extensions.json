@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "EditorConfig.EditorConfig",
+    "SonarSource.sonarlint-vscode",
+    "mike-co.import-sorter",
+    "heybourn.headwind",
+    "qufiwefefwoyn.inline-sql-syntax"
+  ],
+  "unwantedRecommendations": []
+}

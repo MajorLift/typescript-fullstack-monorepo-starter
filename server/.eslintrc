@@ -1,0 +1,10 @@
+{
+    "extends": [
+        "../.eslintrc"
+    ],
+    "rules": {
+        "import/no-named-as-default-member": "off",
+        "@typescript-eslint/no-throw-literal": "off",
+        "@typescript-eslint/no-misused-promises": "off"
+    }
+}

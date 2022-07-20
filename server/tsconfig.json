@@ -1,0 +1,38 @@
+{
+  "extends": "../tsconfig.json",
+  "ts-node": {
+    "swc": true,
+  },
+  "compilerOptions": {
+    "composite": true,
+    "module": "CommonJS",
+    "rootDir": ".",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "types": [
+      "node",
+      "jest",
+    ],
+    "typeRoots": [
+      "src/types",
+      "../node_modules/@types"
+    ],
+    "paths": {
+      "@mono/core": [
+        "../common/core/src",
+      ],
+    },
+  },
+  "references": [
+    {
+      "path": "../common/core/tsconfig.json"
+    },
+  ],
+  "exclude": [
+    "dist",
+  ],
+  "include": [
+    "src",
+    "tests",
+  ]
+}

@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    container_name: pg_container
+    image: 'postgres:alpine'
+    restart: always
+    ports:
+      - 5333:5432
+    volumes:
+      - ./server/src/db/initdb.d/:/docker-entrypoint-initdb.d/
+      - ./db-data/:/var/lib/postgresql/data/
+    env_file:
+      - .env
+      - .env.dev
+      - .env.test
+
+volumes:
+  db-data:
+    driver: local

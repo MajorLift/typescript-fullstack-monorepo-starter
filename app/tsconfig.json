@@ -1,0 +1,49 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "rootDir": ".",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "types": [
+      "node",
+      "redux",
+      "jest"
+    ],
+    "typeRoots": [
+      "../common/@types",
+      "../node_modules/@types"
+    ],
+    "paths": {
+      "@mono/core": [
+        "../common/core/src"
+      ],
+      "components/*": [
+        "./src/components/*"
+      ],
+      "static/*": [
+        "../static/*"
+      ],
+      "styles/*": [
+        "./src/styles/*"
+      ],
+      "types/*": [
+        "src/types/*"
+      ],
+    },
+  },
+  "references": [
+    {
+      "path": "../common/core/tsconfig.json"
+    },
+  ],
+  "exclude": [
+    "build",
+    "static",
+    "node_modules"
+  ],
+  "include": [
+    "src",
+    "tests"
+  ]
+}

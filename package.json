@@ -1,0 +1,65 @@
+{
+  "name": "mono",
+  "description": "",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "app",
+      "server",
+      "common/core"
+    ]
+  },
+  "scripts": {
+    "start": "pkill -9 node; yarn clean && docker-compose up -d && yarn build && yarn workspace @mono/server start",
+    "dev": "pkill -9 node; yarn clean && concurrently \"rm -rf ./db-data && docker-compose up -d\" \"yarn workspace @mono/server start\" \"yarn workspace @mono/app dev\"",
+    "docker-reload": "docker-compose down --volumes && rm -rf ./db-data && docker-compose up -d",
+    "build": "yarn workspace @mono/app build",
+    "swc:common": "yarn workspaces foreach -v run swc",
+    "swc-watch:common": "yarn workspaces foreach -vp run swc-watch",
+    "clean": "yarn workspaces foreach -v exec rm -rf dist build",
+    "tsc": "yarn workspaces foreach -vt run tsc",
+    "tsc-test": "yarn tsc && yarn test",
+    "test": "jest",
+    "test-update": "jest --updateSnapshot",
+    "test-all": "yarn workspaces foreach run test",
+    "lint": "yarn prettier-fix && yarn remove-unused-imports",
+    "eslint-check": "yarn eslint --ext .js,.jsx,.ts,.tsx **/src",
+    "remove-unused-imports": "yarn eslint --fix --ext .js,.jsx,.ts,.tsx --no-eslintrc --config ./.eslintrc-remove-imports **/src",
+    "prettier-check": "npx prettier --check .",
+    "prettier-fix": "npx prettier --write .",
+    "npm-update": "npx -y npm-check-updates -u && yarn workspaces foreach -v run npm-update && yarn"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "@types/redux": "^3.6.31",
+    "@typescript-eslint/eslint-plugin": "^5.30.3",
+    "@typescript-eslint/parser": "^5.30.3",
+    "concurrently": "^7.2.2",
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-formatter-pretty": "^4.1.0",
+    "eslint-import-resolver-typescript": "^3.1.4",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "jest": "^28.1.2",
+    "jest-environment-jsdom": "^28.1.3",
+    "prettier": "2.7.1",
+    "prettier-plugin-organize-imports": "^3.0.0",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.3",
+    "redux": "^4.2.0"
+  }
+}

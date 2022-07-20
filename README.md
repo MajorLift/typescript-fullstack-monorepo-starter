@@ -10,11 +10,14 @@
 - **Backend**: Express.js, RTK Query, PostgreSQL
 - **Project management**: Yarn Workspaces, TypeScript path aliases, tsconfig-paths-plugin
 - **Build**: Webpack, Docker Compose
-  - transpilation: swc-loader (faster, supports HMR)
-  - minification: esbuild-loader (faster)
-- **Linters**: eslint, prettier
+  - Transpilation, ts-node: **SWC**
+    - [~60x speed improvement over babel, tsc. Better performance than esbuild.](https://swc.rs/docs/benchmarks)
+    - Supports HMR with react-refresh (esbuild-loader doesn't).
+  - Minification: **ESBuild**
+    - [10x+ performance compared to terser, swc.](https://github.com/privatenumber/minification-benchmarks)
+- **Linters**: ESLint, Prettier
   - VSCode Extensions: Typescript import sorter, Headwind, Inline-sql-syntax
 - **Testing**: Jest, React Testing Library
 
 ## Demo app
-![Demo-app-gif](https://user-images.githubusercontent.com/34228073/179928197-62c4ef07-554c-453a-a25f-c83f95ef14f1.gif)
+<img src="https://user-images.githubusercontent.com/34228073/179928197-62c4ef07-554c-453a-a25f-c83f95ef14f1.gif" width="360px" />

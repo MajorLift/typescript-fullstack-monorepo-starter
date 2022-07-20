@@ -923,7 +923,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mono/server@workspace:server"
   dependencies:
-    "@mono/api": 1.0.0
     "@mono/feature": 1.0.0
     "@swc/core": ^1.2.207
     "@swc/helpers": ^0.4.3

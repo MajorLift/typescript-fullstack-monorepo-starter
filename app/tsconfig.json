@@ -18,6 +18,12 @@
       "@mono/core": [
         "../common/core/src"
       ],
+      "@mono/feature": [
+        "../common/feature/src"
+      ],
+      "@mono/api": [
+        "../common/api/src"
+      ],
       "components/*": [
         "./src/components/*"
       ],

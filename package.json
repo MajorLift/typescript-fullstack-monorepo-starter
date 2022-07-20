@@ -9,7 +9,8 @@
       "app",
       "server",
       "common/core",
-      "common/feature"
+      "common/feature",
+      "common/api"
     ]
   },
   "scripts": {

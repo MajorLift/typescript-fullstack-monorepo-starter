@@ -6,6 +6,7 @@
     "SonarSource.sonarlint-vscode",
     "mike-co.import-sorter",
     "heybourn.headwind",
+    "bradlc.vscode-tailwindcss",
     "qufiwefefwoyn.inline-sql-syntax"
   ],
   "unwantedRecommendations": []

@@ -28,12 +28,12 @@ export const itemsApi = createApi({
 
     findItemById: builder.query<Item, UUID>({
       query: (itemId) => `/items/${itemId}`,
-      providesTags: (result, error, _id) => [{ type: 'Items', _id }],
+      providesTags: (_result, _error, _id) => [{ type: 'Items', _id }],
     }),
 
     findItemsByUser: builder.query<Item[], UUID>({
       query: (userId) => `/users/${userId}/items`,
-      providesTags: (result, error, userId) =>
+      providesTags: (result, _error, userId) =>
         result
           ? [
               ...result.map(({ _id }) => ({
@@ -48,7 +48,7 @@ export const itemsApi = createApi({
 
     findItemByUser: builder.query<Item, { userId: UUID; itemId: UUID }>({
       query: ({ userId, itemId }) => `/users/${userId}/items/${itemId}`,
-      providesTags: (result, error, { userId, itemId }) => [
+      providesTags: (_result, _error, { userId, itemId }) => [
         { type: 'Items', userId, _id: itemId },
       ],
     }),
@@ -68,7 +68,7 @@ export const itemsApi = createApi({
         method: 'PUT',
         body,
       }),
-      invalidatesTags: (result, error, { itemId }) => [
+      invalidatesTags: (_result, _error, { itemId }) => [
         { type: 'Items', _id: itemId },
       ],
     }),
@@ -78,7 +78,7 @@ export const itemsApi = createApi({
         url: `/items/${itemId}`,
         method: 'DELETE',
       }),
-      invalidatesTags: (result, error, itemId) => [
+      invalidatesTags: (_result, _error, itemId) => [
         { type: 'Items', _id: itemId },
       ],
     }),

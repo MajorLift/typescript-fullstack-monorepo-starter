@@ -73,7 +73,7 @@ export const itemsApi = createApi({
       ],
     }),
 
-    deleteItem: builder.mutation<UUID, UUID>({
+    deleteItem: builder.mutation<string, UUID>({
       query: (itemId) => ({
         url: `/items/${itemId}`,
         method: 'DELETE',

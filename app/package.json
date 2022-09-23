@@ -38,7 +38,7 @@
     "postcss": "^8.4.16",
     "postcss-loader": "^7.0.1",
     "react-refresh": "^0.14.0",
-    "sass": "^1.54.9",
+    "sass": "^1.55.0",
     "sass-loader": "^13.0.2",
     "swc-loader": "^0.2.3",
     "tailwindcss": "^3.1.8",

@@ -38,7 +38,7 @@
     "@types/jest": "^29.0.2",
     "@types/redux": "^3.6.31",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
-    "@typescript-eslint/parser": "^5.37.0",
+    "@typescript-eslint/parser": "^5.39.0",
     "concurrently": "^7.4.0",
     "eslint": "^8.23.1",
     "eslint-config-airbnb-typescript": "^17.0.0",

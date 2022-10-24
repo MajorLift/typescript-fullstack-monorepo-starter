@@ -21,7 +21,7 @@
     "@types/jsdom": "^20.0.0",
     "@types/node": "^18.11.4",
     "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
+    "@types/react-dom": "^18.0.7",
     "@types/react-router": "^5.1.19",
     "@types/react-router-dom": "^5.3.3",
     "@types/uuid": "^8.3.4",

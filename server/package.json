@@ -21,7 +21,7 @@
     "@types/express-useragent": "^1.0.2",
     "@types/hpp": "^0.2.2",
     "@types/morgan": "^1.9.3",
-    "@types/node": "^18.11.4",
+    "@types/node": "^18.11.6",
     "@types/pg": "^8.6.5",
     "dotenv": "^16.0.3",
     "nodemon": "^2.0.20",

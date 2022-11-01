@@ -945,8 +945,8 @@ __metadata:
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^13.4.0
     "@types/jsdom": ^20.0.0
-    "@types/react": ^18.0.24
     "@types/node": ^18.11.7
+    "@types/react": ^18.0.24
     "@types/react-dom": ^18.0.7
     "@types/react-router": ^5.1.19
     "@types/react-router-dom": ^5.3.3
@@ -3542,9 +3542,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"concurrently@npm:^7.4.0":
-  version: 7.4.0
-  resolution: "concurrently@npm:7.4.0"
+"concurrently@npm:^7.5.0":
+  version: 7.5.0
+  resolution: "concurrently@npm:7.5.0"
   dependencies:
     chalk: ^4.1.0
     date-fns: ^2.29.1
@@ -3558,7 +3558,7 @@ __metadata:
   bin:
     conc: dist/bin/concurrently.js
     concurrently: dist/bin/concurrently.js
-  checksum: cc547866ad8d009d184ca3a7115d6636052a5f56f5429d123092d651286043d7233f6429257e30e50f509894cd12798ea831896ac18092d8135f67ffcc8ac3ea
+  checksum: 7886e1c8559d2699ae1b62be8aca5d56c226966e252a2b9dd6077b3c1fd5397e98ef537c040fffa1de50418bd2616746eb9dd589a31ffb9056d4758b850a865b
   languageName: node
   linkType: hard
 
@@ -7852,7 +7852,7 @@ __metadata:
     "@types/redux": ^3.6.31
     "@typescript-eslint/eslint-plugin": ^5.41.0
     "@typescript-eslint/parser": ^5.41.0
-    concurrently: ^7.4.0
+    concurrently: ^7.5.0
     eslint: ^8.26.0
     eslint-config-airbnb-typescript: ^17.0.0
     eslint-config-prettier: ^8.5.0

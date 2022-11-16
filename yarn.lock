@@ -1019,7 +1019,7 @@ __metadata:
     cors: ^2.8.5
     dotenv: ^16.0.3
     express: ^4.18.2
-    express-rate-limit: ^6.6.0
+    express-rate-limit: ^6.7.0
     express-session: ^1.17.3
     express-slow-down: ^1.5.0
     express-useragent: ^1.0.15
@@ -5151,12 +5151,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-rate-limit@npm:^6.6.0":
-  version: 6.6.0
-  resolution: "express-rate-limit@npm:6.6.0"
+"express-rate-limit@npm:^6.7.0":
+  version: 6.7.0
+  resolution: "express-rate-limit@npm:6.7.0"
   peerDependencies:
     express: ^4 || ^5
-  checksum: 056e26c30af5eb3904036e6bb912fe485cf2e23eb21e3bb500f0c165fba5ffe0eebc94991b25f1457f78c25185c282a26f2a1dfce0ec3245f7ee2eb5c954ef99
+  checksum: 7bd3f298b202cdb11c3d7c2dcff9be12c6885be5e64fb112f6c79103ba93a8e5d899ce15a5a3ce48f82190ab3515bed403e067dc3e42fc2832558cbe2620f955
   languageName: node
   linkType: hard
 

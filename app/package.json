@@ -28,7 +28,7 @@
     "@types/webpack": "^5.28.0",
     "autoprefixer": "^10.4.13",
     "csp-html-webpack-plugin": "^5.1.0",
-    "css-loader": "^6.7.1",
+    "css-loader": "^6.7.2",
     "esbuild-loader": "^2.20.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",

@@ -37,7 +37,7 @@
     "express-session": "^1.17.3",
     "express-slow-down": "^1.5.0",
     "express-useragent": "^1.0.15",
-    "helmet": "^6.0.0",
+    "helmet": "^6.0.1",
     "hpp": "^0.2.3",
     "http-status-codes": "^2.2.0",
     "morgan": "^1.10.0",

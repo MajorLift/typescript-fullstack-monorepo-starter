@@ -35,7 +35,7 @@
     "npm-update": "npx -y npm-check-updates -u && yarn workspaces foreach -v run npm-update && yarn"
   },
   "devDependencies": {
-    "@types/jest": "^29.1.2",
+    "@types/jest": "^29.2.4",
     "@types/redux": "^3.6.31",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.42.1",
@@ -54,7 +54,7 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "jest": "^29.1.2",
+    "jest": "^29.3.1",
     "jest-environment-jsdom": "^29.3.1",
     "prettier": "2.8.0",
     "prettier-plugin-organize-imports": "^3.2.1",

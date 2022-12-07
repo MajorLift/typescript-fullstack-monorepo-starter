@@ -37,7 +37,7 @@
   "devDependencies": {
     "@types/jest": "^29.2.4",
     "@types/redux": "^3.6.31",
-    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.1",
     "@typescript-eslint/parser": "^5.45.1",
     "concurrently": "^7.6.0",
     "eslint": "^8.29.0",

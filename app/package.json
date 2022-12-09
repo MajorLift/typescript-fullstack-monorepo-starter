@@ -24,7 +24,7 @@
     "@types/react-dom": "^18.0.9",
     "@types/react-router": "^5.1.19",
     "@types/react-router-dom": "^5.3.3",
-    "@types/uuid": "^8.3.4",
+    "@types/uuid": "^9.0.0",
     "@types/webpack": "^5.28.0",
     "autoprefixer": "^10.4.13",
     "csp-html-webpack-plugin": "^5.1.0",

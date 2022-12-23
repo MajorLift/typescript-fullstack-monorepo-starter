@@ -898,7 +898,7 @@ __metadata:
     "@mono/feature": 1.0.0
     "@mono/ui": 1.0.0
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.10
-    "@swc/core": ^1.3.23
+    "@swc/core": ^1.3.24
     "@swc/helpers": ^0.4.14
     "@tailwindcss/forms": ^0.5.3
     "@testing-library/jest-dom": ^5.16.5
@@ -962,7 +962,7 @@ __metadata:
   resolution: "@mono/server@workspace:server"
   dependencies:
     "@mono/feature": 1.0.0
-    "@swc/core": ^1.3.23
+    "@swc/core": ^1.3.24
     "@swc/helpers": ^0.4.14
     "@types/compression": ^1.7.2
     "@types/cors": ^2.8.13
@@ -1154,90 +1154,90 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-arm64@npm:1.3.23":
-  version: 1.3.23
-  resolution: "@swc/core-darwin-arm64@npm:1.3.23"
+"@swc/core-darwin-arm64@npm:1.3.24":
+  version: 1.3.24
+  resolution: "@swc/core-darwin-arm64@npm:1.3.24"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-x64@npm:1.3.23":
-  version: 1.3.23
-  resolution: "@swc/core-darwin-x64@npm:1.3.23"
+"@swc/core-darwin-x64@npm:1.3.24":
+  version: 1.3.24
+  resolution: "@swc/core-darwin-x64@npm:1.3.24"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm-gnueabihf@npm:1.3.23":
-  version: 1.3.23
-  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.23"
+"@swc/core-linux-arm-gnueabihf@npm:1.3.24":
+  version: 1.3.24
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.24"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-gnu@npm:1.3.23":
-  version: 1.3.23
-  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.23"
+"@swc/core-linux-arm64-gnu@npm:1.3.24":
+  version: 1.3.24
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.24"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-musl@npm:1.3.23":
-  version: 1.3.23
-  resolution: "@swc/core-linux-arm64-musl@npm:1.3.23"
+"@swc/core-linux-arm64-musl@npm:1.3.24":
+  version: 1.3.24
+  resolution: "@swc/core-linux-arm64-musl@npm:1.3.24"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-gnu@npm:1.3.23":
-  version: 1.3.23
-  resolution: "@swc/core-linux-x64-gnu@npm:1.3.23"
+"@swc/core-linux-x64-gnu@npm:1.3.24":
+  version: 1.3.24
+  resolution: "@swc/core-linux-x64-gnu@npm:1.3.24"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-musl@npm:1.3.23":
-  version: 1.3.23
-  resolution: "@swc/core-linux-x64-musl@npm:1.3.23"
+"@swc/core-linux-x64-musl@npm:1.3.24":
+  version: 1.3.24
+  resolution: "@swc/core-linux-x64-musl@npm:1.3.24"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-win32-arm64-msvc@npm:1.3.23":
-  version: 1.3.23
-  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.23"
+"@swc/core-win32-arm64-msvc@npm:1.3.24":
+  version: 1.3.24
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.24"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-win32-ia32-msvc@npm:1.3.23":
-  version: 1.3.23
-  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.23"
+"@swc/core-win32-ia32-msvc@npm:1.3.24":
+  version: 1.3.24
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.24"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@swc/core-win32-x64-msvc@npm:1.3.23":
-  version: 1.3.23
-  resolution: "@swc/core-win32-x64-msvc@npm:1.3.23"
+"@swc/core-win32-x64-msvc@npm:1.3.24":
+  version: 1.3.24
+  resolution: "@swc/core-win32-x64-msvc@npm:1.3.24"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core@npm:^1.3.23":
-  version: 1.3.23
-  resolution: "@swc/core@npm:1.3.23"
+"@swc/core@npm:^1.3.24":
+  version: 1.3.24
+  resolution: "@swc/core@npm:1.3.24"
   dependencies:
-    "@swc/core-darwin-arm64": 1.3.23
-    "@swc/core-darwin-x64": 1.3.23
-    "@swc/core-linux-arm-gnueabihf": 1.3.23
-    "@swc/core-linux-arm64-gnu": 1.3.23
-    "@swc/core-linux-arm64-musl": 1.3.23
-    "@swc/core-linux-x64-gnu": 1.3.23
-    "@swc/core-linux-x64-musl": 1.3.23
-    "@swc/core-win32-arm64-msvc": 1.3.23
-    "@swc/core-win32-ia32-msvc": 1.3.23
-    "@swc/core-win32-x64-msvc": 1.3.23
+    "@swc/core-darwin-arm64": 1.3.24
+    "@swc/core-darwin-x64": 1.3.24
+    "@swc/core-linux-arm-gnueabihf": 1.3.24
+    "@swc/core-linux-arm64-gnu": 1.3.24
+    "@swc/core-linux-arm64-musl": 1.3.24
+    "@swc/core-linux-x64-gnu": 1.3.24
+    "@swc/core-linux-x64-musl": 1.3.24
+    "@swc/core-win32-arm64-msvc": 1.3.24
+    "@swc/core-win32-ia32-msvc": 1.3.24
+    "@swc/core-win32-x64-msvc": 1.3.24
   dependenciesMeta:
     "@swc/core-darwin-arm64":
       optional: true
@@ -1261,7 +1261,7 @@ __metadata:
       optional: true
   bin:
     swcx: run_swcx.js
-  checksum: 2a92949c33f292a369f4a750a8a9759f88f6f399bc0beef54768fce3d1af5cf0c33a4c8f3c2478020ae95e99d99b7c17f301b79163cdbcdf533b91675f1d2e8d
+  checksum: a27b842be129b83c116f804e63deaa51dbd5d9b77d6260888d549f6408df1dd05aeef20046ceacc9fd7458e6afda6723545249bd77f77086b98bd9bf84738c19
   languageName: node
   linkType: hard
 
@@ -1996,13 +1996,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.46.1":
-  version: 5.46.1
-  resolution: "@typescript-eslint/eslint-plugin@npm:5.46.1"
+"@typescript-eslint/eslint-plugin@npm:^5.47.0":
+  version: 5.47.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:5.47.0"
   dependencies:
-    "@typescript-eslint/scope-manager": 5.46.1
-    "@typescript-eslint/type-utils": 5.46.1
-    "@typescript-eslint/utils": 5.46.1
+    "@typescript-eslint/scope-manager": 5.47.0
+    "@typescript-eslint/type-utils": 5.47.0
+    "@typescript-eslint/utils": 5.47.0
     debug: ^4.3.4
     ignore: ^5.2.0
     natural-compare-lite: ^1.4.0
@@ -2015,7 +2015,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 4ea4af5faa5c509113d575bf6ea1f76989f253b4839bb98bcda28450be7fc8a87788169e822b0f6d739aee67e32e824440ef00cebc294d4212ffb3fed1f0756a
+  checksum: fd867eb2b668d1f476fd28d38c2df2a680bf510a265a6e714b28d8f77e7a37e74e32294b70262a6fd1aec99ddb2fddef0212c862b4465ca4f83bb1172476f6e7
   languageName: node
   linkType: hard
 
@@ -2066,12 +2066,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/type-utils@npm:5.46.1":
-  version: 5.46.1
-  resolution: "@typescript-eslint/type-utils@npm:5.46.1"
+"@typescript-eslint/type-utils@npm:5.47.0":
+  version: 5.47.0
+  resolution: "@typescript-eslint/type-utils@npm:5.47.0"
   dependencies:
-    "@typescript-eslint/typescript-estree": 5.46.1
-    "@typescript-eslint/utils": 5.46.1
+    "@typescript-eslint/typescript-estree": 5.47.0
+    "@typescript-eslint/utils": 5.47.0
     debug: ^4.3.4
     tsutils: ^3.21.0
   peerDependencies:
@@ -2079,7 +2079,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: a47f1b73ac773a7f33421a8e8f9bc6e047f55236e3257b2c9eaa04d18595ab6505129ffdab86685e9c3bef564091315a2347150cd6e61a511cc2160667458014
+  checksum: 504b3e883ac02cb8e69957b706e76cb79fa2192aa62702c2a658119f28f8f50f1e668efb62318e85aeda6522e1d948b59382cae4ef3300a3f4eea809a87dec26
   languageName: node
   linkType: hard
 
@@ -2158,21 +2158,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:5.46.1":
-  version: 5.46.1
-  resolution: "@typescript-eslint/utils@npm:5.46.1"
+"@typescript-eslint/utils@npm:5.47.0":
+  version: 5.47.0
+  resolution: "@typescript-eslint/utils@npm:5.47.0"
   dependencies:
     "@types/json-schema": ^7.0.9
     "@types/semver": ^7.3.12
-    "@typescript-eslint/scope-manager": 5.46.1
-    "@typescript-eslint/types": 5.46.1
-    "@typescript-eslint/typescript-estree": 5.46.1
+    "@typescript-eslint/scope-manager": 5.47.0
+    "@typescript-eslint/types": 5.47.0
+    "@typescript-eslint/typescript-estree": 5.47.0
     eslint-scope: ^5.1.1
     eslint-utils: ^3.0.0
     semver: ^7.3.7
   peerDependencies:
     eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-  checksum: db9fd1dfb2390e66041f9529d564f38ccf74042de68e0e1e3d319ba4d02d7cd969d75dc056f938b98acab53ad7c1e36c68eabb15c0b2e2296b081652fa8d3820
+  checksum: f168920eec6f77651107f190b4ecadd82951fe4e3c0321ff660ac7380f4315d5ae30a1b63b4d2818f5e6f007a3f34c5df202619c24ec3a7e2ef25b215ec7b813
   languageName: node
   linkType: hard
 
@@ -7888,7 +7888,7 @@ __metadata:
     "@reduxjs/toolkit": ^1.9.1
     "@types/jest": ^29.2.4
     "@types/redux": ^3.6.31
-    "@typescript-eslint/eslint-plugin": ^5.46.1
+    "@typescript-eslint/eslint-plugin": ^5.47.0
     "@typescript-eslint/parser": ^5.47.0
     concurrently: ^7.6.0
     eslint: ^8.30.0

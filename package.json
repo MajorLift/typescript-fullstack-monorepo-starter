@@ -35,7 +35,7 @@
     "npm-update": "npx -y npm-check-updates -u && yarn workspaces foreach -v run npm-update && yarn"
   },
   "devDependencies": {
-    "@types/jest": "^29.2.4",
+    "@types/jest": "^29.2.5",
     "@types/redux": "^3.6.31",
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",

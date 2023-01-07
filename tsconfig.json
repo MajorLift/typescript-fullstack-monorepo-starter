@@ -30,6 +30,7 @@
     "resolveJsonModule": true, // Allow importing .json files
     /* Type-Checking Options */
     "strict": true /* enable all strict type-checking options. Implies noImplicitAny, strictNullChecks. */,
+    "exactOptionalPropertyTypes": true,
     "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */,
     "noImplicitOverride": true /* Ensure overriding members in derived classes are marked with an override modifier. */,
     "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,

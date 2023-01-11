@@ -1,8 +1,8 @@
 import compression from 'compression'
 import cors from 'cors'
 import express, { Application, Router } from 'express'
-import rateLimit from 'express-rate-limit'
-import SlowDown from 'express-slow-down'
+import { rateLimit } from 'express-rate-limit'
+import slowDown from 'express-slow-down'
 import useragent from 'express-useragent'
 import helmet from 'helmet'
 import hpp from 'hpp'
@@ -72,7 +72,7 @@ export class App {
       })
     )
     this.app.use(
-      SlowDown({
+      slowDown({
         windowMs: 24 * 60 * 1,
         delayMs: 24 * 60 * 2000,
         delayAfter: 1000,

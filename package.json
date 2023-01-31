@@ -62,7 +62,7 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.1",
+    "@reduxjs/toolkit": "^1.9.2",
     "redux": "^4.2.0"
   }
 }

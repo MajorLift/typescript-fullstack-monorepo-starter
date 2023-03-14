@@ -29,7 +29,7 @@
     "autoprefixer": "^10.4.13",
     "csp-html-webpack-plugin": "^5.1.0",
     "css-loader": "^6.7.3",
-    "esbuild-loader": "^2.21.0",
+    "esbuild-loader": "^3.0.1",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "jsdom": "^21.1.0",

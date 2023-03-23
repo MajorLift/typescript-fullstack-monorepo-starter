@@ -1209,7 +1209,7 @@ __metadata:
     express: ^4.18.2
     express-rate-limit: ^6.7.0
     express-session: ^1.17.3
-    express-slow-down: ^1.5.0
+    express-slow-down: ^1.6.0
     express-useragent: ^1.0.15
     helmet: ^6.0.1
     hpp: ^0.2.3
@@ -3656,13 +3656,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clone@npm:^1.0.2":
-  version: 1.0.4
-  resolution: "clone@npm:1.0.4"
-  checksum: d06418b7335897209e77bdd430d04f882189582e67bd1f75a04565f3f07f5b3f119a9d670c943b6697d0afb100f03b866b3b8a1f91d4d02d72c4ecf2bb64b5dd
-  languageName: node
-  linkType: hard
-
 "co@npm:^4.6.0":
   version: 4.6.0
   resolution: "co@npm:4.6.0"
@@ -4173,15 +4166,6 @@ __metadata:
   dependencies:
     execa: ^5.0.0
   checksum: 126f8273ecac8ee9ff91ea778e8784f6cd732d77c3157e8c5bdd6ed03651b5291f71446d05bc02d04073b1e67583604db5394ea3cf992ede0088c70ea15b7378
-  languageName: node
-  linkType: hard
-
-"defaults@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "defaults@npm:1.0.3"
-  dependencies:
-    clone: ^1.0.2
-  checksum: 96e2112da6553d376afd5265ea7cbdb2a3b45535965d71ab8bb1da10c8126d168fdd5268799625324b368356d21ba2a7b3d4ec50961f11a47b7feb9de3d4413e
   languageName: node
   linkType: hard
 
@@ -5370,12 +5354,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-slow-down@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "express-slow-down@npm:1.5.0"
-  dependencies:
-    defaults: ^1.0.3
-  checksum: dcba6fcc126c80846039ffc8cc1c5a8a43bb0b6cc24d50c4a34953dd6da18ed61c7b65c8cc8a6641f0da10d75f2283bb2cdaf1611f4b91a39825fd7ebdca169f
+"express-slow-down@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "express-slow-down@npm:1.6.0"
+  checksum: a176007f155455f24a7791ffa31442fae7791064db7cd39282bfd5dd4817078cb47c179de31cb3a124b8138666ac0fa697630067ba3126ef6eddd3b1b9f80198
   languageName: node
   linkType: hard
 

@@ -34,7 +34,7 @@
     "html-webpack-plugin": "^5.5.0",
     "jsdom": "^21.1.0",
     "jsdom-global": "^3.0.2",
-    "mini-css-extract-plugin": "^2.7.2",
+    "mini-css-extract-plugin": "^2.7.5",
     "postcss": "^8.4.21",
     "postcss-loader": "^7.0.2",
     "react-refresh": "^0.14.0",

@@ -14,12 +14,11 @@ export const EditorModal = (): JSX.Element | null => {
   const dispatch = useAppDispatch()
   const { activeItemId, showEditorModal } = useAppSelector((state) => state.ui)
 
-  const { activeItem } = useFindAllItemsQuery<{ activeItem?: Item }>(
+  const { activeItem } = useFindAllItemsQuery<{ activeItem: Item | undefined }>(
     undefined,
     {
-      selectFromResult: ({ data }: { data?: Item[] }) => ({
+      selectFromResult: ({ data }) => ({
         activeItem: data?.find((item) => {
-          if (!activeItemId) return false
           return item._id === activeItemId
         }),
       }),

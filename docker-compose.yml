@@ -2,7 +2,7 @@ version: '3'
 services:
   db:
     container_name: pg_container
-    image: 'postgres:alpine'
+    image: 'postgres:latest'
     restart: always
     ports:
       - 5333:5432

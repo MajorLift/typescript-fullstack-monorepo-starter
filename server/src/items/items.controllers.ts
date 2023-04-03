@@ -11,8 +11,8 @@ export const ItemsController: ExpressController<Item> = {
   findAllItems: async (_req, res, next) => {
     try {
       const { rows } = await conn.query<Item>(ItemQueries.findAllItems)
-      console.log(rows.map((item) => item._id))
       res.locals.items = rows
+      console.log((res.locals.items as Item[]).map((item) => item._id))
       next()
     } catch (e) {
       console.error(e)
@@ -26,6 +26,7 @@ export const ItemsController: ExpressController<Item> = {
         itemId,
       ])
       res.locals.items = rows
+      console.log(res.locals.items)
       next()
     } catch (e) {
       console.error(e)
@@ -89,6 +90,7 @@ export const ItemsController: ExpressController<Item> = {
           .send(`'Content-Type' must be 'application/json'`)
       }
       res.locals.items = rows
+      console.log(res.locals.items)
       next()
     } catch (e) {
       console.error(e)

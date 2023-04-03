@@ -1,29 +1,23 @@
 import { Router } from 'express'
 import { StatusCodes as status } from 'http-status-codes'
 
-import { isDev } from '../types'
 import { ItemsController } from './items.controllers'
 
 import type { Item } from '@mono/feature'
-export const itemsRouter = Router()
 
-if (isDev) {
-  itemsRouter.get('/items', ItemsController.findAllItems, (_req, res) => {
-    const { items } = res.locals as { items: Item[] }
-    res.status(status.OK).json(items)
-  })
+export const itemsRouter: Router = Router()
 
-  itemsRouter.get(
-    '/items/:itemId',
-    ItemsController.findItemById,
-    (_req, res) => {
-      const {
-        items: [item],
-      } = res.locals as { items: Item[] }
-      res.status(status.OK).json(item)
-    }
-  )
-}
+itemsRouter.get('/items', ItemsController.findAllItems, (_req, res) => {
+  const { items } = res.locals as { items: Item[] }
+  res.status(status.OK).json(items)
+})
+
+itemsRouter.get('/items/:itemId', ItemsController.findItemById, (_req, res) => {
+  const {
+    items: [item],
+  } = res.locals as { items: Item[] }
+  res.status(status.OK).json(item)
+})
 
 itemsRouter.get(
   '/users/:userId/items',

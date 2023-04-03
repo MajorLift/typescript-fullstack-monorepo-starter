@@ -2,7 +2,7 @@ const CspHtmlWebpackPlugin = require('csp-html-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
-const { ESBuildMinifyPlugin } = require('esbuild-loader')
+const { EsbuildPlugin } = require('esbuild-loader')
 const path = require('path')
 
 const mode = process.env.NODE_ENV || 'development'
@@ -48,7 +48,7 @@ const baseConfig = {
   },
   optimization: {
     minimizer: [
-      new ESBuildMinifyPlugin({
+      new EsbuildPlugin({
         target: 'es6',
         css: true,
       }),

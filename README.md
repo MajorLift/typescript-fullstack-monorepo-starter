@@ -20,4 +20,4 @@
 - Extensible: simple code sharing between mobile (native), desktop (electron), additional frontend apps or remote services etc. 
 
 ## Demo app
-<img src="https://user-images.githubusercontent.com/34228073/179928197-62c4ef07-554c-453a-a25f-c83f95ef14f1.gif" width="360px" />
+<img width="883" alt="Screenshot 2023-04-04 at 7 56 07 AM" src="https://user-images.githubusercontent.com/34228073/229833362-827c56cd-1da7-4c00-a2dd-5671d1d416a3.png">

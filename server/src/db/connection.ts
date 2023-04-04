@@ -10,5 +10,5 @@ export const conn = new Pool({
   user: POSTGRES_USER,
   password: POSTGRES_PASSWORD,
   database: POSTGRES_DB,
-  port: parseInt(POSTGRES_PORT || '5432'),
+  port: parseInt(POSTGRES_PORT ?? '5432'),
 })

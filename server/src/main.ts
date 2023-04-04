@@ -23,8 +23,8 @@ export class App {
   constructor() {
     this.app = express()
     this.version = 1
-    this.env = process.env.NODE_ENV || 'development'
-    this.port = parseInt(process.env.SERVER_PORT || '3000')
+    this.env = process.env.NODE_ENV ?? 'development'
+    this.port = parseInt(process.env.SERVER_PORT ?? '3000')
   }
 
   private config() {

@@ -32,8 +32,8 @@ export const EditorModal = (): JSX.Element | null => {
   const [contentText, setContentText] = useState('')
 
   useEffect(() => {
-    setTitleText(activeItem?.title || '')
-    setContentText(activeItem?.content || '')
+    setTitleText(activeItem?.title ?? '')
+    setContentText(activeItem?.content ?? '')
   }, [activeItem?.title, activeItem?.content])
 
   const handleClear = () => {
@@ -60,7 +60,7 @@ export const EditorModal = (): JSX.Element | null => {
     handleClear()
   }
 
-  return showEditorModal && (!activeItemId || activeItem) ? (
+  return showEditorModal && (activeItemId === undefined || !!activeItem) ? (
     <>
       <div
         className="fixed inset-0 bg-black opacity-25"

@@ -50,11 +50,11 @@ export const ItemsController: ExpressController<Item> = {
       const { userId } = req.params
       const { rows } = await conn.query(ItemQueries.findItemsByUser, [
         userId,
-        search || '',
-        orderBy || 'created_time ASC',
-        offset || 0,
-        limit || 100,
-        filters || {},
+        search ?? '',
+        orderBy ?? 'created_time ASC',
+        offset ?? 0,
+        limit ?? 100,
+        filters ?? {},
       ])
       res.locals.items = rows
       next()

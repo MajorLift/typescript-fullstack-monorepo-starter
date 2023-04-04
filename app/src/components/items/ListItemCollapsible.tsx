@@ -49,7 +49,7 @@ export function ListItemCollapsible({
           </div>
           <div className="m-1 text-xs font-light text-gray-500">
             {new Date(
-              currentItem.modified_time || currentItem.created_time
+              currentItem.modified_time ?? currentItem.created_time
             ).toLocaleString()}
           </div>
         </div>

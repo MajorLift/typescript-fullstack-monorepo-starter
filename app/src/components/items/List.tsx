@@ -4,13 +4,11 @@ import { v4 as uuid } from 'uuid'
 import { useFindAllItemsQuery } from '@mono/api'
 import { ListItemCollapsible } from 'components/items'
 
-import type { Item } from '@mono/feature'
-
 export const List = (): JSX.Element => {
   const { isLoading, isError, error, data } = useFindAllItemsQuery(undefined, {
-    refetchOnMountOrArgChange: true,
-    refetchOnReconnect: true,
-    refetchOnFocus: true,
+    refetchOnMountOrArgChange: false,
+    refetchOnReconnect: false,
+    refetchOnFocus: false,
   })
 
   return isError ? (

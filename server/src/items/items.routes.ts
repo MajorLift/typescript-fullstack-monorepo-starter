@@ -46,7 +46,7 @@ itemsRouter.post('/items', ItemsController.createItem, (_req, res) => {
   res.header('Location', `/items/${item._id}`).status(status.CREATED).json(item)
 })
 
-itemsRouter.put('/items/:itemId', ItemsController.updateItem, (_req, res) => {
+itemsRouter.post('/items/:itemId', ItemsController.updateItem, (_req, res) => {
   const {
     items: [item],
   } = res.locals as { items: Item[] }

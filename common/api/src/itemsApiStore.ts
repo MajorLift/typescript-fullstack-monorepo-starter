@@ -65,7 +65,7 @@ export const itemsApi = createApi({
     updateItem: builder.mutation<Item, { itemId: UUID; body: Partial<Item> }>({
       query: ({ itemId, body }) => ({
         url: `/items/${itemId}`,
-        method: 'PUT',
+        method: 'POST',
         body,
       }),
       invalidatesTags: (_result, _error, { itemId }) => [

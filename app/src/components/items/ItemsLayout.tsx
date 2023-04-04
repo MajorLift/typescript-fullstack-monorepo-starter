@@ -12,7 +12,7 @@ export const ItemsLayout = (): JSX.Element => {
 
   const openAll = useAppSelector((state) => state.ui.openAll)
 
-  const { data }: { data?: Item[] } = useFindAllItemsQuery()
+  const { data } = useFindAllItemsQuery()
   const [deleteItem] = useDeleteItemMutation()
 
   return (

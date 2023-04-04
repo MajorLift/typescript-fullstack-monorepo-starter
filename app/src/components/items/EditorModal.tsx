@@ -28,8 +28,8 @@ export const EditorModal = (): JSX.Element | null => {
   const [createItem] = useCreateItemMutation()
   const [updateItem] = useUpdateItemMutation()
 
-  const [titleText, setTitleText] = useState<string>('')
-  const [contentText, setContentText] = useState<string>('')
+  const [titleText, setTitleText] = useState('')
+  const [contentText, setContentText] = useState('')
 
   useEffect(() => {
     setTitleText(activeItem?.title || '')

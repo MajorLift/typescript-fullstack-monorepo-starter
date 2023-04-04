@@ -21,7 +21,7 @@ export const List = (): JSX.Element => {
     <div className="text-gray-200">Write your first note!</div>
   ) : (
     <div className="bg-white shadow-lg shadow-black rounded-xl">
-      {(data as Item[]).map((item) => (
+      {data.map((item) => (
         <ListItemCollapsible key={uuid()} itemId={item._id} />
       ))}
     </div>

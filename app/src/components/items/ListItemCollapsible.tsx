@@ -18,9 +18,9 @@ export function ListItemCollapsible({
   const [open, setOpen] = useState(openAll)
 
   const { currentItem } = useFindAllItemsQuery<{
-    currentItem?: Item
+    currentItem: Item | undefined
   }>(undefined, {
-    selectFromResult: ({ data }: { data?: Item[] }) => ({
+    selectFromResult: ({ data }) => ({
       currentItem: data?.find((item: Item) => item._id === itemId),
     }),
   })

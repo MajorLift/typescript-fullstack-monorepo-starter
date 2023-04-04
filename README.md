@@ -8,6 +8,7 @@
 ## Stack 
 - **Frontend**: `React`, `Redux Toolkit`, `RTK Query`, `Tailwind CSS`
 - **Backend**: `Express.js`, `PostgreSQL`, `Docker Compose`
+  - Express middleware: `express-rate-limit`, `express-slow-down`, `helmet`, `hpp`, `nocache`, `morgan`
 - **Build**: `Webpack`
   - Transpilation, `ts-node`: **`SWC`**
     - [~60x speed improvement over `babel`, `tsc`. Better performance than `esbuild`.](https://swc.rs/docs/benchmarks)

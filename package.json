@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "pkill -9 node; yarn clean && NODE_ENV=production docker-compose up -d && yarn build && yarn workspace @mono/server start",
-    "dev": "pkill -9 node; yarn clean && NODE_ENV=development concurrently \"rm -rf ./db-data && docker-compose up -d\" \"yarn workspace @mono/server start\" \"yarn workspace @mono/app dev\"",
+    "dev": "pkill -9 node; yarn clean && rm -rf ./db-data && docker-compose up -d && NODE_ENV=development concurrently \"yarn workspace @mono/server start\" \"yarn workspace @mono/app dev\"",
     "docker-reload": "docker-compose down --volumes && rm -rf ./db-data && docker-compose up -d",
     "build": "NODE_ENV=production yarn workspace @mono/app build",
     "swc:common": "yarn workspaces foreach -v run swc",

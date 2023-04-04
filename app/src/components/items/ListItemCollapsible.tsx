@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { useDeleteItemMutation, useFindAllItemsQuery } from '@mono/api'
 import { useAppDispatch, useAppSelector } from '@mono/core'
@@ -17,11 +17,15 @@ export function ListItemCollapsible({
   const { openAll } = useAppSelector((state) => state.ui)
   const [open, setOpen] = useState(openAll)
 
+  useEffect(() => {
+    setOpen(openAll)
+  }, [openAll])
+
   const { currentItem } = useFindAllItemsQuery<{
     currentItem: Item | undefined
   }>(undefined, {
     selectFromResult: ({ data }) => ({
-      currentItem: data?.find((item: Item) => item._id === itemId),
+      currentItem: data?.find((item) => item._id === itemId),
     }),
   })
 
@@ -29,9 +33,8 @@ export function ListItemCollapsible({
 
   const handleClickDelete = async () => {
     try {
-      if (!currentItem) throw new TypeError('Item is undefined')
-      const data = await deleteItem(currentItem._id)
-      console.log(data)
+      if (currentItem === undefined) throw new TypeError('Item is undefined')
+      await deleteItem(currentItem._id)
     } catch (e) {
       console.error(e)
     }

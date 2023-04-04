@@ -1,5 +1,4 @@
 import React from 'react'
-import { v4 as uuid } from 'uuid'
 
 import { useFindAllItemsQuery } from '@mono/api'
 import { ListItemCollapsible } from 'components/items'
@@ -20,7 +19,7 @@ export const List = (): JSX.Element => {
   ) : (
     <div className="bg-white shadow-lg shadow-black rounded-xl">
       {data.map((item) => (
-        <ListItemCollapsible key={uuid()} itemId={item._id} />
+        <ListItemCollapsible key={item._id} itemId={item._id} />
       ))}
     </div>
   )

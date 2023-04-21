@@ -1172,7 +1172,7 @@ __metadata:
     express-session: ^1.17.3
     express-slow-down: ^1.6.0
     express-useragent: ^1.0.15
-    helmet: ^6.0.1
+    helmet: ^6.1.5
     hpp: ^0.2.3
     http-status-codes: ^2.2.0
     morgan: ^1.10.0
@@ -6024,10 +6024,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"helmet@npm:^6.0.1":
-  version: 6.0.1
-  resolution: "helmet@npm:6.0.1"
-  checksum: 1ca20d0b7888b6208130bbb50d183e68d53bb5fa0caead2106226d6d53216dfc893b4b5c07528304e342884f75d87702003b80884b065cb5dcbc705fb4a6ad52
+"helmet@npm:^6.1.5":
+  version: 6.1.5
+  resolution: "helmet@npm:6.1.5"
+  checksum: 58cc8f8715e2c486f3c7a58f89fcda3c9e83ab427bfe16d8486d8be53a681afc291f9900b9e60e5d42c63c25ece3da864a33cdd621a12f5a67cbc9046cff393d
   languageName: node
   linkType: hard
 

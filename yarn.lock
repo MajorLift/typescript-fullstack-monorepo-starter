@@ -1094,7 +1094,7 @@ __metadata:
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^14.0.0
     "@types/jsdom": ^21.1.1
-    "@types/node": ^18.15.11
+    "@types/node": ^18.16.1
     "@types/react": ^18.0.38
     "@types/react-dom": ^18.0.11
     "@types/react-router": ^5.1.20
@@ -1162,7 +1162,7 @@ __metadata:
     "@types/express-useragent": ^1.0.2
     "@types/hpp": ^0.2.2
     "@types/morgan": ^1.9.4
-    "@types/node": ^18.15.11
+    "@types/node": ^18.16.1
     "@types/pg": ^8.6.6
     compression: ^1.7.4
     cors: ^2.8.5
@@ -1943,10 +1943,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.15.11":
-  version: 18.15.11
-  resolution: "@types/node@npm:18.15.11"
-  checksum: 977b4ad04708897ff0eb049ecf82246d210939c82461922d20f7d2dcfd81bbc661582ba3af28869210f7e8b1934529dcd46bff7d448551400f9d48b9d3bddec3
+"@types/node@npm:^18.16.1":
+  version: 18.16.1
+  resolution: "@types/node@npm:18.16.1"
+  checksum: 799026b949a48993cba7c9b81b2eabfdfb34c880744cb44c1c990fbedc9e315f3634d126eb2cf9a6e0795577c01016e2326d98565bef695ada9d363fadeb6946
   languageName: node
   linkType: hard
 

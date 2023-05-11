@@ -41,7 +41,7 @@
     "sass": "^1.60.0",
     "sass-loader": "^13.2.2",
     "swc-loader": "^0.2.3",
-    "tailwindcss": "^3.2.7",
+    "tailwindcss": "^3.3.2",
     "tsconfig-paths-webpack-plugin": "^4.0.1",
     "typescript": "^5.0.4",
     "url-loader": "^4.1.1",

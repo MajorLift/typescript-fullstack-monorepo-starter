@@ -12,7 +12,7 @@ export const ItemsController: ExpressController<Item> = {
     try {
       const { rows } = await conn.query<Item>(ItemQueries.findAllItems)
       res.locals.items = rows
-      console.log((res.locals.items as Item[]).map((item) => item._id))
+      console.log(res.locals.items.map((item) => item._id))
       next()
     } catch (e) {
       console.error(e)
@@ -48,14 +48,17 @@ export const ItemsController: ExpressController<Item> = {
           .json(`Limit must be less than or equal to 100.`)
       }
       const { userId } = req.params
-      const { rows } = await conn.query(ItemQueries.findItemsByUser, [
-        userId,
-        search ?? '',
-        orderBy ?? 'created_time ASC',
-        offset ?? 0,
-        limit ?? 100,
-        filters ?? {},
-      ])
+      const { rows }: { rows: Item[] } = await conn.query(
+        ItemQueries.findItemsByUser,
+        [
+          userId,
+          search ?? '',
+          orderBy ?? 'created_time ASC',
+          offset ?? 0,
+          limit ?? 100,
+          filters ?? {},
+        ]
+      )
       res.locals.items = rows
       next()
     } catch (e) {
@@ -66,10 +69,10 @@ export const ItemsController: ExpressController<Item> = {
   findItemByUser: async (req, res, next) => {
     try {
       const { userId, itemId } = req.params
-      const { rows } = await conn.query(ItemQueries.findItemByUser, [
-        userId,
-        itemId,
-      ])
+      const { rows }: { rows: Item[] } = await conn.query(
+        ItemQueries.findItemByUser,
+        [userId, itemId]
+      )
       res.locals.items = rows
       next()
     } catch (e) {
@@ -111,11 +114,10 @@ export const ItemsController: ExpressController<Item> = {
           .status(status.UNSUPPORTED_MEDIA_TYPE)
           .send(`'Content-Type' must be 'application/json'`)
       }
-      const { rows } = await conn.query(ItemQueries.updateItem, [
-        title,
-        content,
-        itemId,
-      ])
+      const { rows }: { rows: Item[] } = await conn.query(
+        ItemQueries.updateItem,
+        [title, content, itemId]
+      )
       if (!rows) await ItemsController.createItem(req, res, next)
       else res.locals.items = rows
       next()
@@ -127,7 +129,10 @@ export const ItemsController: ExpressController<Item> = {
   deleteItem: async (req, res, next) => {
     try {
       const { itemId } = req.params
-      const { rows } = await conn.query(ItemQueries.deleteItem, [itemId])
+      const { rows }: { rows: Item[] } = await conn.query(
+        ItemQueries.deleteItem,
+        [itemId]
+      )
       if (rows.length === 0) {
         throw res.status(status.NOT_FOUND).send('Item not found')
       } else res.locals.items = rows

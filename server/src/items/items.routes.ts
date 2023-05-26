@@ -8,14 +8,14 @@ import type { Item } from '@mono/feature'
 export const itemsRouter: Router = Router()
 
 itemsRouter.get('/items', ItemsController.findAllItems, (_req, res) => {
-  const { items } = res.locals as { items: Item[] }
+  const { items } = res.locals
   res.status(status.OK).json(items)
 })
 
 itemsRouter.get('/items/:itemId', ItemsController.findItemById, (_req, res) => {
   const {
     items: [item],
-  } = res.locals as { items: Item[] }
+  } = res.locals
   res.status(status.OK).json(item)
 })
 
@@ -23,7 +23,7 @@ itemsRouter.get(
   '/users/:userId/items',
   ItemsController.findItemsByUser,
   (_req, res) => {
-    const { items } = res.locals as { items: Item[] }
+    const { items } = res.locals
     res.status(status.OK).json(items)
   }
 )
@@ -34,7 +34,7 @@ itemsRouter.get(
   (_req, res) => {
     const {
       items: [item],
-    } = res.locals as { items: Item[] }
+    } = res.locals
     res.status(status.OK).json(item)
   }
 )
@@ -42,14 +42,14 @@ itemsRouter.get(
 itemsRouter.post('/items', ItemsController.createItem, (_req, res) => {
   const {
     items: [item],
-  } = res.locals as { items: Item[] }
+  } = res.locals
   res.header('Location', `/items/${item._id}`).status(status.CREATED).json(item)
 })
 
 itemsRouter.post('/items/:itemId', ItemsController.updateItem, (_req, res) => {
   const {
     items: [item],
-  } = res.locals as { items: Item[] }
+  } = res.locals
   res.status(status.OK).json(item)
 })
 

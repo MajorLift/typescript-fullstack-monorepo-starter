@@ -5,8 +5,8 @@ export const isDev = process.env.NODE_ENV === 'development'
 
 export type ExpressRouteFunc<T> = (
   req: Request<{ itemId: UUID; userId?: UUID }, Partial<T> | T[], Partial<T>>,
-  res: Response<Partial<T> | T[] | string>,
+  res: Response<Partial<T> | T[] | string, { items: T[] }>,
   next: NextFunction
 ) => void | Promise<void>
 
-export type ExpressController<T> = Record<string, ExpressRouteFunc<T>>
+export type ExpressController<T> = Record<PropertyKey, ExpressRouteFunc<T>>

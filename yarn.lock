@@ -1131,7 +1131,7 @@ __metadata:
     tsconfig-paths-webpack-plugin: ^4.0.1
     typescript: ^5.0.4
     url-loader: ^4.1.1
-    webpack: ^5.84.1
+    webpack: ^5.85.1
     webpack-cli: ^5.1.1
     webpack-dev-server: ^4.15.0
     webpack-merge: ^5.9.0
@@ -11680,9 +11680,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.84.1":
-  version: 5.84.1
-  resolution: "webpack@npm:5.84.1"
+"webpack@npm:^5.85.1":
+  version: 5.85.1
+  resolution: "webpack@npm:5.85.1"
   dependencies:
     "@types/eslint-scope": ^3.7.3
     "@types/estree": ^1.0.0
@@ -11713,7 +11713,7 @@ __metadata:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 646b645df5badf2dac2ddd0193c9e9a177d51283d18f918eead36a0cdf7b750c4111d9ac11d9825c1334cbd0a6fb8f82628fbfb90d0066f927265dd11b47b192
+  checksum: 6fa659ef5e53211e6eeaed1987ac415ddd219584414b2d5ca0d528f0c7dd49be5363a9840e1def33efe1b3305ef3ad3c91f803bd87e41d2771b125340caa4df7
   languageName: node
   linkType: hard
 

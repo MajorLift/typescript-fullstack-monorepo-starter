@@ -15,10 +15,11 @@
     ]
   },
   "scripts": {
-    "start": "pkill -9 node; yarn clean && NODE_ENV=production docker-compose up -d && yarn build && yarn workspace @mono/server start",
-    "dev": "pkill -9 node; yarn clean && rm -rf ./db-data && docker-compose up -d && NODE_ENV=development concurrently \"yarn workspace @mono/server start\" \"yarn workspace @mono/app dev\"",
-    "docker-reload": "docker-compose down --volumes && rm -rf ./db-data && docker-compose up -d",
-    "build": "NODE_ENV=production yarn workspace @mono/app build",
+    "start": "pkill -9 node; yarn clean && yarn docker-reload && yarn build && yarn workspace @mono/server start || yarn docker-clean",
+    "dev": "pkill -9 node; yarn clean && yarn docker-reload && NODE_ENV=development concurrently \"yarn workspace @mono/server start\" \"yarn workspace @mono/app dev\"",
+    "docker-clean": "docker-compose down --volumes && rm -rf ./db-data",
+    "docker-reload": "yarn docker-clean && docker-compose up -d",
+    "build": "NODE_ENV=production yarn workspace @mono/app build && yarn tsc --noEmit false",
     "swc:common": "yarn workspaces foreach -v run swc",
     "swc-watch:common": "yarn workspaces foreach -vp run swc-watch",
     "clean": "yarn workspaces foreach -v exec rm -rf dist build",

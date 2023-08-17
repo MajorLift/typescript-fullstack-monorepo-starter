@@ -1,23 +1,70 @@
 # TypeScript Fullstack Monorepo Starter
 
-## Project structure
+- This project brings the blazing-fast DX of a **modern JS build system** to codebases reliant on *Webpack*. 
+- It also implements a convenient monorepo setup that is extensible to any number of frontend clients or backend services.
+
+## Getting Started 
+
+### Install
+
+Click the green `Use this Template` button on GitHub, or run this command.
+
+```bash
+git clone --depth 1 https://github.com/MajorLift/typescript-fullstack-monorepo-starter
+```
+
+Yarn is required to use this template.
+
+```bash
+npm install --global yarn
+```
+
+### Scripts
+
+```bash
+## 1. To run the project in dev mode, navigate to the project directory and run:
+> yarn dev
+
+# This will concurrently spawn
+# - The React app at http://localhost:8080
+# - The Express server at http://localhost:3000
+# - The Postgres DB at http://localhost:5333
+
+## 2. To generate a production build
+> yarn build
+
+# 3. To preview the production build with `ts-node` running on `nodemon`
+> yarn start
+
+# 4. To clean up or reload the DB
+> yarn docker-clean
+> yarn docker-reload
+
+# 5. To run the linter
+> yarn lint
+
+# 6. To run the test suite
+> yarn test
+```
+
+## Features
+
+### Speed Improvements
+- Transpilation: **`SWC`**
+    - [~60x speed improvement over `babel`, `tsc`. Better performance than `esbuild`.](https://swc.rs/docs/benchmarks)
+    - Supports HMR with `react-refresh` (unlike `esbuild-loader`).
+- Minification: **`ESBuild`**
+    - [10x+ performance compared to `swc`, `terser`.](https://github.com/privatenumber/minification-benchmarks)
+
+### Project structure
   - Monorepo setup with `Yarn Workspaces`, TypeScript path aliases, `tsconfig-paths-plugin`
   - React SPA, Express server, Redux state slices all organized as independent subrepos.
   - Simple code sharing (types, constants, modules) between cross-platform frontend clients (mobile, electron) and backend services. 
 
-## Stack 
+### Stack 
 - **Frontend**: `React`, `Redux Toolkit`, `RTK Query`, `Tailwind CSS`
-- **Backend**: `Express.js`, `PostgreSQL`, `Docker Compose`
-  - Express middleware: `express-rate-limit`, `express-slow-down`, `helmet`, `hpp`, `nocache`, `morgan`
+- **Backend**: `Express.js`, `ts-node`, `PostgreSQL`, `Docker Compose`
+- **Express middleware**: `express-rate-limit`, `express-slow-down`, `helmet`, `hpp`, `nocache`, `morgan`
 - **Build**: `Webpack`
-  - Transpilation, `ts-node`: **`SWC`**
-    - [~60x speed improvement over `babel`, `tsc`. Better performance than `esbuild`.](https://swc.rs/docs/benchmarks)
-    - Supports HMR with `react-refresh` (unlike `esbuild-loader`).
-  - Minification: **`ESBuild`**
-    - [10x+ performance compared to `terser`, `swc`.](https://github.com/privatenumber/minification-benchmarks)
-- **Linters**: `ESLint`, `Prettier`
-  - `VSCode Extensions`: `Headwind`, `Inline-sql-syntax`, `TypeScript import sorter`
+- **Linters**: `ESLint`, `Prettier`, `Headwind`, `TypeScript Import Sorter`
 - **Testing**: `Jest`, `React Testing Library`
-
-## Demo app
-<img width="883" alt="Screenshot 2023-04-04 at 7 56 07 AM" src="https://user-images.githubusercontent.com/34228073/229833362-827c56cd-1da7-4c00-a2dd-5671d1d416a3.png">

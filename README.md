@@ -19,6 +19,8 @@ Yarn is required to use this template.
 npm install --global yarn
 ```
 
+Docker is used to launch the Postgres DB. Download it [here](https://docs.docker.com/engine/install/).
+
 ### Scripts
 
 #### 1. To run the project in dev mode, navigate to the project directory and run:

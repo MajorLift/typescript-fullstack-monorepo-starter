@@ -3,6 +3,28 @@
 - This project brings the blazing-fast DX of a **modern JS build system** to codebases reliant on *Webpack*. 
 - It also implements a convenient monorepo setup that is extensible to any number of frontend clients or backend services.
 
+## Features
+
+### Speed Improvements
+- Transpilation: **`SWC`**
+    - [~60x speed improvement over `babel`, `tsc`. Better performance than `esbuild`.](https://swc.rs/docs/benchmarks)
+    - Supports HMR with `react-refresh` (unlike `esbuild-loader`).
+- Minification: **`ESBuild`**
+    - [10x+ performance compared to `swc`, `terser`.](https://github.com/privatenumber/minification-benchmarks)
+
+### Project structure
+  - Monorepo setup with `Yarn Workspaces`, TypeScript path aliases, `tsconfig-paths-plugin`
+  - React SPA, Express server, Redux state slices all organized as independent subrepos.
+  - Simple code sharing (types, constants, modules) between cross-platform frontend clients (mobile, electron) and backend services. 
+
+## Stack 
+- **Frontend**: `React`, `Redux Toolkit`, `RTK Query`, `Tailwind CSS`
+- **Backend**: `Express.js`, `ts-node`, `PostgreSQL`, `Docker Compose`
+- **Express middleware**: `express-rate-limit`, `express-slow-down`, `helmet`, `hpp`, `nocache`, `morgan`
+- **Build**: `Webpack`
+- **Linters**: `ESLint`, `Prettier`, `Headwind`, `TypeScript Import Sorter`
+- **Testing**: `Jest`, `React Testing Library`
+
 ## Getting Started 
 
 ### Install
@@ -57,25 +79,3 @@ This will concurrently spawn
 ```bash
 > yarn test
 ```
-
-## Features
-
-### Speed Improvements
-- Transpilation: **`SWC`**
-    - [~60x speed improvement over `babel`, `tsc`. Better performance than `esbuild`.](https://swc.rs/docs/benchmarks)
-    - Supports HMR with `react-refresh` (unlike `esbuild-loader`).
-- Minification: **`ESBuild`**
-    - [10x+ performance compared to `swc`, `terser`.](https://github.com/privatenumber/minification-benchmarks)
-
-### Project structure
-  - Monorepo setup with `Yarn Workspaces`, TypeScript path aliases, `tsconfig-paths-plugin`
-  - React SPA, Express server, Redux state slices all organized as independent subrepos.
-  - Simple code sharing (types, constants, modules) between cross-platform frontend clients (mobile, electron) and backend services. 
-
-### Stack 
-- **Frontend**: `React`, `Redux Toolkit`, `RTK Query`, `Tailwind CSS`
-- **Backend**: `Express.js`, `ts-node`, `PostgreSQL`, `Docker Compose`
-- **Express middleware**: `express-rate-limit`, `express-slow-down`, `helmet`, `hpp`, `nocache`, `morgan`
-- **Build**: `Webpack`
-- **Linters**: `ESLint`, `Prettier`, `Headwind`, `TypeScript Import Sorter`
-- **Testing**: `Jest`, `React Testing Library`

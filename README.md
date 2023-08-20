@@ -21,29 +21,38 @@ npm install --global yarn
 
 ### Scripts
 
+#### 1. To run the project in dev mode, navigate to the project directory and run:
 ```bash
-## 1. To run the project in dev mode, navigate to the project directory and run:
 > yarn dev
+```
+This will concurrently spawn
+- The React app at http://localhost:8080
+- The Express server at http://localhost:3000
+- The Postgres DB at http://localhost:5333
 
-# This will concurrently spawn
-# - The React app at http://localhost:8080
-# - The Express server at http://localhost:3000
-# - The Postgres DB at http://localhost:5333
-
-## 2. To generate a production build
+#### 2. To generate a production build
+```bash
 > yarn build
+```
 
-# 3. To preview the production build with `ts-node` running on `nodemon`
+#### 3. To preview the production build with `ts-node` running on `nodemon`
+```bash
 > yarn start
+```
 
-# 4. To clean up or reload the DB
+#### 4. To clean up or reload the DB
+```bash
 > yarn docker-clean
 > yarn docker-reload
+```
 
-# 5. To run the linter
+#### 5. To run the linter
+```bash
 > yarn lint
+```
 
-# 6. To run the test suite
+#### 6. To run the test suite
+```bash
 > yarn test
 ```
 

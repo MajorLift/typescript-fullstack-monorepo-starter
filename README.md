@@ -47,7 +47,7 @@ Docker is used to launch the Postgres DB. Download it [here](https://docs.docker
 
 1. To run the project in dev mode, navigate to the project directory and run:
 ```bash
-> yarn dev
+yarn dev
 ```
 - This will concurrently spawn...
   - The React app at [http://localhost:8080](http://localhost:8080)
@@ -56,26 +56,26 @@ Docker is used to launch the Postgres DB. Download it [here](https://docs.docker
 
 2. To generate a production build
 ```bash
-> yarn build
+yarn build
 ```
 
 3. To preview the production build with `ts-node` running on `nodemon`
 ```bash
-> yarn start
+yarn start
 ```
 
 4. To clean up or reload the DB
 ```bash
-> yarn docker-clean
-> yarn docker-reload
+yarn docker-clean
+yarn docker-reload
 ```
 
 5. To run the linter
 ```bash
-> yarn lint
+yarn lint
 ```
 
 6. To run the test suite
 ```bash
-> yarn test
+yarn test
 ```
